@@ -39,8 +39,11 @@ package day3;
     }
 }
  */
-public class array{
-    public static int countdigits(int n){
+/*
+ * public class array
+{
+    public static int countdigits(int n)
+    {
         int count=0;
         while(n!=0){
             n=n/10;// digits elemination
@@ -48,10 +51,54 @@ public class array{
         }
         return count;
      }
-     public static void main(String[] args) {
+     public static void main(String[] args)
+      {
         int n=1234;
         System.out.println(countdigits(n));
+        
      }
     
 }
+ */
+public class array
+{
+    public static int countdigits(int n){
+        int count=0;
+        while(n!=0){
+            n=n/10;// digits elemination
+            count++;
+        }
+        return count;
+
+    }
+    
+     
+    public static int  checkArmstrong (int n){
+        int sum=0;
+        int digit = countdigits(n);
+        while(n!=0)
+        {
+            int digits=n%10;
+            sum+=Math.pow(digits,digit);
+            n/=10;
+        }
+        return n;
+
+    }
+    public static void main(String[] args) {
+        int n=153;
+       int armstrongnumber= checkArmstrong(n);
+        if(armstrongnumber){
+            System.out.println(n+ "is an armstrong no");
+        } 
+
+
+
+    }
+
+}    
+
+    
+        
+
 
