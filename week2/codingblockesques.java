@@ -81,7 +81,7 @@ public class Main {
     }
 } 
 import java.util.*;
-public class Main {
+public class codingblocks {
 	public static int findLcm(int a, int b){
 		 int res= Math.max(a,b);
 		 while(true){

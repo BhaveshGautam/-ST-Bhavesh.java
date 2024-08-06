@@ -75,25 +75,25 @@ public class recursion {
         
 
       */
-      
-      // head recursive for fibonacci
-      /*
-       * // head recursion of fibonacci series 
+    
+    // head recursion of fibonacci series 
     public static int fibonacci(int n) {
-        if (n <= 1)// (n==0||n==1) use this to avoid negative fibonacci result 
+        if (n==0||n==1) //use this to avoid negative fibonacci result 
         {
             return n;
             }
             else {
                 return fibonacci(n - 1) + fibonacci(n - 2);
                 }
-                }
+                
+        }
 
 
     public static void main(String[] args) {
         System.out.println(fibonacci(3));
     }
-       */
+       
+
 
 
      // head recursive for count even
@@ -142,8 +142,8 @@ public class recursion {
                         }
       */
       //head recursive
-    /*
-     * public static int power(int base ,int power){
+     /*
+      * public static int power(int base ,int power){
         if(power==0){
             return 1;
         }
@@ -155,9 +155,13 @@ public class recursion {
         
 
     }
-     */
+      */
+
+    }
+     
      // tail recursive for power
-     static int pow(int n,int pow){
+    /*
+     *  static int pow(int n,int pow){
         if(pow==0){
             return 1;
         }
@@ -168,7 +172,91 @@ public class recursion {
     
         System.out.println(pow(5,2));
      }
-      }
+     */
+
+    // tail recursive  for tossoing coin( this question is 99% similar to fibonacci ques )
+  /*
+   * static void toss (int n, String ans){
+   *       if(n==0)
+        {
+            System.err.println(ans );
+            return;
+        }
+        toss(n-1, ans+"H");// it is called for head 
+        toss(n-1, ans +" T"); // it is called for tail
+    }
+    public static void main(String[] args) {
+        int n=3;
+        toss(n," ");
+    }
+
+   */
+   // tail recursive for generating subsequences 
+  /*
+   *  static void generateSubsequence(String Ques , String ans ){
+    if(Ques.length()==0)
+    {
+        System.out.println(ans);
+        return;
+
+   }
+   else{
+    generateSubsequence(Ques.substring(1),ans+Ques.charAt(0));
+    generateSubsequence(Ques.substring(1),ans);
+
+   }
+}
+   public static void main(String[] args) {
+    generateSubsequence("car"," ");
+
+   }
+
+   */
+// use head recusrion  to count all thr generated subsequences.....
+/*
+ * static int countGseq(String ques ){
+    if(ques.isEmpty()){ // base case 
+        return 1;// becoz if this{} then it is considered to be 1 subsequences of string given...
+          }
+    int num1=countGseq(ques.substring(1));// including your first character 
+    int num2=countGseq (ques.substring(1));// not includig your first character 
+
+    return num1+num2;
+}
+public static void main(String[] args) {
+    String s= "abc";
+    System.out.println(countGseq(s));
+
+}
+ */
+// use tail recursion to count all the generated subsequences....
+
+/*
+ * static void generateParenthesis(int n, int l,int r,String ans ){
+    if(n==l&&l==r){
+        System.out.println(ans);
+        return;
+
+    }
+    if(l<n){
+        generateParenthesis(n,l+1,r,ans+"(");
+    }
+    if(r<l){
+        
+        generateParenthesis(n,l,r+1,ans+" )");
+    }
+}
+public static void main(String[] args) {
+    generateParenthesis(3,0,0,"");
+
+    }
+    
+ */
+
+    
+
+
+    
       
     
     

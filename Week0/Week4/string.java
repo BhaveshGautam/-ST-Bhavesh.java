@@ -7,7 +7,8 @@ public class string {
                 System.out.println(s.substring(i, j));
         }
     }
-}
+}// lovely ne send kia hai strings ka
+
     public static void main(String[] args) {
         String s="abcde";
         GallString(s,0,5);
